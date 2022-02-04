@@ -24,12 +24,12 @@ jobs:
 
       - name: mermaid files changed
         run: |
-          echo $
+          echo ${{ steps.getfile.outputs.files }}
 
       - name: compile mermaid
         uses: neenjaw/compile-mermaid-markdown-action@v0.3.3
         with:
-          files: $
+          files: ${{ steps.getfile.outputs.files }}
           output: 'docs/images'
         env:
           HIDE_CODEBLOCKS: 1
