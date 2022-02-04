@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '**/*.md'
+      - '**/*.yml'
   workflow_dispatch:
 
 jobs:
@@ -42,7 +43,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -Am "Add mermaid changes" 
+          git commit -am "Add mermaid changes" 
 
       - name: Push changes
         uses: ad-m/github-push-action@master
