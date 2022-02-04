@@ -6,8 +6,7 @@ on:
       - '**/*.mermaid'
       - '**/*.mmd'
       - '**/*.md'
-    branches-ignore:
-      - main
+  workflow_dispatch:
 
 jobs:
   build:
